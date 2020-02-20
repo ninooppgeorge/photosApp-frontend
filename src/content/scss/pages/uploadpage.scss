@@ -1,0 +1,32 @@
+.uploadpage{
+    .dropzone-div{
+        .dropzone-section{
+            border-radius: 5px;
+            padding: 40px 20px;
+            text-align: center;
+            border: 2px dashed #ddd;
+        }
+        input{
+            padding: 10px;
+            border: 1px solid #ddd;
+            display: block;
+            width: 100%;
+            margin: 10px 0px;
+        }
+    }
+    .preview-section{
+        margin-top: 20px;
+        .preview-single{
+            width: 80px;
+            height: 80px;
+            overflow: hidden;
+            position: relative;
+            border: 3px solid #888;
+            display: inline-block;
+            margin: 10px;
+            img{
+                height: 100%;
+            }
+        }
+    }
+}

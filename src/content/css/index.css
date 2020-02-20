@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  transition: ease all 1s;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  background: #ddd;
+  padding: 10px 20px;
+  font-size: 14px;
+  display: inline-block;
+  color: #333;
+  border-radius: 3px;
+}
+.button.red {
+  background: #f06;
+  color: #fff;
+}
+.button.blue {
+  background: #0089ff;
+  color: #fff;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.page {
+  padding: 0% 15%;
+}
+
+.page-content {
+  padding-top: 50px;
+}
+
+.mainpage .image-container {
+  width: 100%;
+}
+.mainpage .image-container span {
+  font-weight: 800;
+  color: #1977ca;
+  font-size: 20px;
+  border-bottom: 2px dashed;
+}
+.mainpage .image-container .single-image {
+  display: inline-block;
+  padding: 10px;
+}
+.mainpage .image-container .single-image img {
+  width: 240px;
+  height: 240px;
+}
+.mainpage .image-container .group-by {
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+}
+.mainpage .image-container .loadmore {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+@media all and (max-width: 425px) {
+  .nav {
+    display: block !important;
+  }
+
+  .button {
+    margin-top: 10px;
+  }
+
+  .mainpage .image-container .single-image img {
+    width: 100%;
+  }
+}
+.uploadpage .dropzone-div .dropzone-section {
+  border-radius: 5px;
+  padding: 40px 20px;
+  text-align: center;
+  border: 2px dashed #ddd;
+}
+.uploadpage .dropzone-div input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  display: block;
+  width: 100%;
+  margin: 10px 0px;
+}
+.uploadpage .preview-section {
+  margin-top: 20px;
+}
+.uploadpage .preview-section .preview-single {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  position: relative;
+  border: 3px solid #888;
+  display: inline-block;
+  margin: 10px;
+}
+.uploadpage .preview-section .preview-single img {
+  height: 100%;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+.nav h3 {
+  font-weight: 800;
+  font-size: 30px;
+  color: #444;
+}
+
+/*# sourceMappingURL=index.css.map */
