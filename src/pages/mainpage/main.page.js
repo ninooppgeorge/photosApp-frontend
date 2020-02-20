@@ -56,7 +56,7 @@ class MainPage extends Component{
     };
 
     callApi(){
-        Axios.get(ApiURL+'photosa?page='+this.state.page+'&count=10').then((data)=>{
+        Axios.get(ApiURL+'/photosa?page='+this.state.page+'&count=10').then((data)=>{
             var newdata = data.data;
             
             var olddata = this.state.ogresult;
