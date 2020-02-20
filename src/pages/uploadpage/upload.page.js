@@ -4,6 +4,7 @@ import Dropzone from 'react-dropzone'
 
 import NavBar from "../../components/nav.component";
 import Axios from "axios";
+import { ApiURL } from "../../config";
 
 class UploadPage extends Component{
     constructor(props){
@@ -43,7 +44,7 @@ class UploadPage extends Component{
         for (var pair of fd.entries()) {
             console.log(pair[0]+ ', ' + pair[1]); 
         }
-        Axios.put('http://localhost:3000/photosa',fd,config).then((data)=>{
+        Axios.put(ApiURL+'/photosa',fd,config).then((data)=>{
             console.log(data.data)
             this.setState({
                 files: [],

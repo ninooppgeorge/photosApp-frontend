@@ -5,6 +5,7 @@ import Axios from "axios";
 
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
+import { ApiURL } from "../../config";
 
 class MainPage extends Component{
     
@@ -55,7 +56,7 @@ class MainPage extends Component{
     };
 
     callApi(){
-        Axios.get('http://localhost:3000/photosa?page='+this.state.page+'&count=10').then((data)=>{
+        Axios.get(ApiURL+'photosa?page='+this.state.page+'&count=10').then((data)=>{
             var newdata = data.data;
             
             var olddata = this.state.ogresult;
@@ -93,7 +94,7 @@ class MainPage extends Component{
     getUrl(index){
         console.log(index);
         console.log(this.state.ogresult)
-        var url = "http://localhost:3000/photosa/uploads/"+this.state.ogresult[index].imageName;
+        var url = ApiURL+"/photosa/uploads/"+this.state.ogresult[index].imageName;
         console.log(url)
         return url;
     }
@@ -101,7 +102,7 @@ class MainPage extends Component{
     openBox(index){
         console.log(index)
         console.log(this.state.ogresult[index])
-        var url = "http://localhost:3000/photosa/uploads/"+this.state.ogresult[index].imageName;
+        var url = ApiURL+"/photosa/uploads/"+this.state.ogresult[index].imageName;
         console.log(url)
         this.setState({ isOpen: true, photoIndex: index })
     }
@@ -121,7 +122,7 @@ class MainPage extends Component{
                                     {val.map((item,ii)=>{
                                         return(
                                             <div className="single-image" onClick={this.openBox.bind(this,ii)} key={ii}>
-                                                <img alt="" src={"http://localhost:3000/photosa/uploads/"+item.imageName}/>
+                                                <img alt="" src={ApiURL+"/photosa/uploads/"+item.imageName}/>
                                             </div>
                                         )
         
